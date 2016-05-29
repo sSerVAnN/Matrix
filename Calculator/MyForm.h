@@ -13,7 +13,7 @@ namespace Calculator {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm
+	/// Сводка для MyForm ппилвоаилаоаоватпва
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
