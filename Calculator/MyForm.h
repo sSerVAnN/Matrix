@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <cstdlib>
 #include <Windows.h>
 
@@ -13,7 +13,7 @@ namespace Calculator {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm ппилвоаилаоаоватпва
+	/// РЎРІРѕРґРєР° РґР»СЏ MyForm РїРїРёР»РІРѕР°РёР»Р°РѕР°РѕРІР°С‚РїРІР°
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -22,13 +22,13 @@ namespace Calculator {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~MyForm()
 		{
@@ -92,14 +92,14 @@ namespace Calculator {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -156,7 +156,7 @@ namespace Calculator {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(117, 59);
 			this->button2->TabIndex = 4;
-			this->button2->Text = L"создать матрицу А";
+			this->button2->Text = L"СЃРѕР·РґР°С‚СЊ РјР°С‚СЂРёС†Сѓ Рђ";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
@@ -167,7 +167,7 @@ namespace Calculator {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(64, 17);
 			this->label3->TabIndex = 3;
-			this->label3->Text = L"столбцы";
+			this->label3->Text = L"СЃС‚РѕР»Р±С†С‹";
 			// 
 			// label2
 			// 
@@ -176,7 +176,7 @@ namespace Calculator {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(53, 17);
 			this->label2->TabIndex = 2;
-			this->label2->Text = L"строки";
+			this->label2->Text = L"СЃС‚СЂРѕРєРё";
 			// 
 			// numericUpDown2
 			// 
@@ -288,7 +288,7 @@ namespace Calculator {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(64, 17);
 			this->label1->TabIndex = 10;
-			this->label1->Text = L"столбцы";
+			this->label1->Text = L"СЃС‚РѕР»Р±С†С‹";
 			// 
 			// label4
 			// 
@@ -297,7 +297,7 @@ namespace Calculator {
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(53, 17);
 			this->label4->TabIndex = 11;
-			this->label4->Text = L"строки";
+			this->label4->Text = L"СЃС‚СЂРѕРєРё";
 			// 
 			// button5
 			// 
@@ -305,7 +305,7 @@ namespace Calculator {
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(117, 59);
 			this->button5->TabIndex = 12;
-			this->button5->Text = L"создать матрицу В";
+			this->button5->Text = L"СЃРѕР·РґР°С‚СЊ РјР°С‚СЂРёС†Сѓ Р’";
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
@@ -316,7 +316,7 @@ namespace Calculator {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(149, 17);
 			this->label5->TabIndex = 13;
-			this->label5->Text = L"Полученная матрица";
+			this->label5->Text = L"РџРѕР»СѓС‡РµРЅРЅР°СЏ РјР°С‚СЂРёС†Р°";
 			// 
 			// button6
 			// 
@@ -324,7 +324,7 @@ namespace Calculator {
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(172, 52);
 			this->button6->TabIndex = 14;
-			this->button6->Text = L"Возведение матрицы А в степень n";
+			this->button6->Text = L"Р’РѕР·РІРµРґРµРЅРёРµ РјР°С‚СЂРёС†С‹ Рђ РІ СЃС‚РµРїРµРЅСЊ n";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
 			// 
@@ -334,7 +334,7 @@ namespace Calculator {
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(172, 52);
 			this->button7->TabIndex = 15;
-			this->button7->Text = L"Определитель матрицы А";
+			this->button7->Text = L"РћРїСЂРµРґРµР»РёС‚РµР»СЊ РјР°С‚СЂРёС†С‹ Рђ";
 			this->button7->UseVisualStyleBackColor = true;
 			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			// 
@@ -355,7 +355,7 @@ namespace Calculator {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(305, 17);
 			this->label6->TabIndex = 0;
-			this->label6->Text = L"Отдельные вычисления для одной матрицы;";
+			this->label6->Text = L"РћС‚РґРµР»СЊРЅС‹Рµ РІС‹С‡РёСЃР»РµРЅРёСЏ РґР»СЏ РѕРґРЅРѕР№ РјР°С‚СЂРёС†С‹;";
 			// 
 			// label7
 			// 
@@ -364,7 +364,7 @@ namespace Calculator {
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(175, 17);
 			this->label7->TabIndex = 14;
-			this->label7->Text = L"используется матрица А:";
+			this->label7->Text = L"РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РјР°С‚СЂРёС†Р° Рђ:";
 			// 
 			// label8
 			// 
@@ -382,7 +382,7 @@ namespace Calculator {
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(79, 17);
 			this->label9->TabIndex = 18;
-			this->label9->Text = L"Матрица А";
+			this->label9->Text = L"РњР°С‚СЂРёС†Р° Рђ";
 			// 
 			// label10
 			// 
@@ -391,7 +391,7 @@ namespace Calculator {
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(79, 17);
 			this->label10->TabIndex = 19;
-			this->label10->Text = L"Матрица В";
+			this->label10->Text = L"РњР°С‚СЂРёС†Р° Р’";
 			// 
 			// button8
 			// 
@@ -399,7 +399,7 @@ namespace Calculator {
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(114, 59);
 			this->button8->TabIndex = 20;
-			this->button8->Text = L"Зарандомить матрицу А";
+			this->button8->Text = L"Р—Р°СЂР°РЅРґРѕРјРёС‚СЊ РјР°С‚СЂРёС†Сѓ Рђ";
 			this->button8->UseVisualStyleBackColor = true;
 			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
 			// 
@@ -409,7 +409,7 @@ namespace Calculator {
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(182, 23);
 			this->button9->TabIndex = 22;
-			this->button9->Text = L"Очистить матрицу В";
+			this->button9->Text = L"РћС‡РёСЃС‚РёС‚СЊ РјР°С‚СЂРёС†Сѓ Р’";
 			this->button9->UseVisualStyleBackColor = true;
 			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
 			// 
@@ -419,7 +419,7 @@ namespace Calculator {
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(186, 23);
 			this->button10->TabIndex = 23;
-			this->button10->Text = L"Очистить матрицу А";
+			this->button10->Text = L"РћС‡РёСЃС‚РёС‚СЊ РјР°С‚СЂРёС†Сѓ Рђ";
 			this->button10->UseVisualStyleBackColor = true;
 			this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
 			// 
@@ -429,7 +429,7 @@ namespace Calculator {
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(117, 59);
 			this->button11->TabIndex = 24;
-			this->button11->Text = L"Зарандомить матрицу В";
+			this->button11->Text = L"Р—Р°СЂР°РЅРґРѕРјРёС‚СЊ РјР°С‚СЂРёС†Сѓ Р’";
 			this->button11->UseVisualStyleBackColor = true;
 			this->button11->Click += gcnew System::EventHandler(this, &MyForm::button11_Click);
 			// 
@@ -439,7 +439,7 @@ namespace Calculator {
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(190, 31);
 			this->button12->TabIndex = 25;
-			this->button12->Text = L"Очистить получ-ую матр.";
+			this->button12->Text = L"РћС‡РёСЃС‚РёС‚СЊ РїРѕР»СѓС‡-СѓСЋ РјР°С‚СЂ.";
 			this->button12->UseVisualStyleBackColor = true;
 			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click);
 			// 
@@ -451,7 +451,7 @@ namespace Calculator {
 			this->radioButton1->Size = System::Drawing::Size(45, 21);
 			this->radioButton1->TabIndex = 26;
 			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"да";
+			this->radioButton1->Text = L"РґР°";
 			this->radioButton1->UseVisualStyleBackColor = true;
 			// 
 			// radioButton2
@@ -463,7 +463,7 @@ namespace Calculator {
 			this->radioButton2->Size = System::Drawing::Size(52, 21);
 			this->radioButton2->TabIndex = 27;
 			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"нет";
+			this->radioButton2->Text = L"РЅРµС‚";
 			this->radioButton2->UseVisualStyleBackColor = true;
 			// 
 			// label11
@@ -473,7 +473,7 @@ namespace Calculator {
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(215, 17);
 			this->label11->TabIndex = 28;
-			this->label11->Text = L"Выравнивать столбцы матриц\?";
+			this->label11->Text = L"Р’С‹СЂР°РІРЅРёРІР°С‚СЊ СЃС‚РѕР»Р±С†С‹ РјР°С‚СЂРёС†\?";
 			// 
 			// button13
 			// 
@@ -491,7 +491,7 @@ namespace Calculator {
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(237, 34);
 			this->button14->TabIndex = 30;
-			this->button14->Text = L"Удалить матрицу А";
+			this->button14->Text = L"РЈРґР°Р»РёС‚СЊ РјР°С‚СЂРёС†Сѓ Рђ";
 			this->button14->UseVisualStyleBackColor = true;
 			this->button14->Click += gcnew System::EventHandler(this, &MyForm::button14_Click);
 			// 
@@ -501,7 +501,7 @@ namespace Calculator {
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(240, 34);
 			this->button15->TabIndex = 31;
-			this->button15->Text = L"Удалить матрицу В";
+			this->button15->Text = L"РЈРґР°Р»РёС‚СЊ РјР°С‚СЂРёС†Сѓ Р’";
 			this->button15->UseVisualStyleBackColor = true;
 			this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
 			// 
@@ -511,7 +511,7 @@ namespace Calculator {
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(219, 31);
 			this->button16->TabIndex = 32;
-			this->button16->Text = L"Удалить получ-ую матрицу";
+			this->button16->Text = L"РЈРґР°Р»РёС‚СЊ РїРѕР»СѓС‡-СѓСЋ РјР°С‚СЂРёС†Сѓ";
 			this->button16->UseVisualStyleBackColor = true;
 			this->button16->Click += gcnew System::EventHandler(this, &MyForm::button16_Click);
 			// 
@@ -560,7 +560,7 @@ namespace Calculator {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
-			this->Text = L"Матричный калькулятор";
+			this->Text = L"РњР°С‚СЂРёС‡РЅС‹Р№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
@@ -598,7 +598,7 @@ namespace Calculator {
 
 		void MemoryError()
 		{					
-			MessageBox::Show("Нехватка памяти", "Ошибка");
+			MessageBox::Show("РќРµС…РІР°С‚РєР° РїР°РјСЏС‚Рё", "РћС€РёР±РєР°");
 			exit(1);		
 		}
 
@@ -744,7 +744,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 	int m1 = Convert::ToInt32(numericUpDown4->Value);
 	if (n != n1 || m != m1)
 	{
-		MessageBox::Show("при сложении матрицы должны быть одинаковые по размерам", "Ошибка");
+		MessageBox::Show("РїСЂРё СЃР»РѕР¶РµРЅРёРё РјР°С‚СЂРёС†С‹ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РѕРґРёРЅР°РєРѕРІС‹Рµ РїРѕ СЂР°Р·РјРµСЂР°Рј", "РћС€РёР±РєР°");
 		
 	}
 	else if (n == n1 || m == m1)
@@ -762,7 +762,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				}
 				catch (ArgumentOutOfRangeException^ e)
 				{
-					MessageBox::Show("Возможно, вы забыли заново создать матрицу после изменения кол-ва строк/столбцов или вовсе не создали ее", "Ошибка");
+					MessageBox::Show("Р’РѕР·РјРѕР¶РЅРѕ, РІС‹ Р·Р°Р±С‹Р»Рё Р·Р°РЅРѕРІРѕ СЃРѕР·РґР°С‚СЊ РјР°С‚СЂРёС†Сѓ РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ РєРѕР»-РІР° СЃС‚СЂРѕРє/СЃС‚РѕР»Р±С†РѕРІ РёР»Рё РІРѕРІСЃРµ РЅРµ СЃРѕР·РґР°Р»Рё РµРµ", "РћС€РёР±РєР°");
 					goto error;
 				}
 				
@@ -789,7 +789,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 	int m1 = Convert::ToInt32(numericUpDown4->Value);
 	if (n != n1 || m != m1)
 	{
-		MessageBox::Show("при вычитании матрицы должны быть одинаковые по размерам", "Ошибка");
+		MessageBox::Show("РїСЂРё РІС‹С‡РёС‚Р°РЅРёРё РјР°С‚СЂРёС†С‹ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РѕРґРёРЅР°РєРѕРІС‹Рµ РїРѕ СЂР°Р·РјРµСЂР°Рј", "РћС€РёР±РєР°");
 
 	}
 	else if (n == n1 || m == m1)
@@ -806,7 +806,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 				}
 				catch (ArgumentOutOfRangeException^ e)
 				{
-					MessageBox::Show("Возможно, вы забыли заново создать матрицу после изменения кол-ва строк/столбцов или вовсе не создали ее", "Ошибка");
+					MessageBox::Show("Р’РѕР·РјРѕР¶РЅРѕ, РІС‹ Р·Р°Р±С‹Р»Рё Р·Р°РЅРѕРІРѕ СЃРѕР·РґР°С‚СЊ РјР°С‚СЂРёС†Сѓ РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ РєРѕР»-РІР° СЃС‚СЂРѕРє/СЃС‚РѕР»Р±С†РѕРІ РёР»Рё РІРѕРІСЃРµ РЅРµ СЃРѕР·РґР°Р»Рё РµРµ", "РћС€РёР±РєР°");
 					goto error;
 				}
 				
@@ -834,7 +834,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 	int m2 = Convert::ToInt32(numericUpDown4->Value);
 	if (m1 != n2)
 	{
-		MessageBox::Show("При умножении столбцы 1ой матрицы должны равняться строкам 2ой матрицы ", "Ошибка");
+		MessageBox::Show("РџСЂРё СѓРјРЅРѕР¶РµРЅРёРё СЃС‚РѕР»Р±С†С‹ 1РѕР№ РјР°С‚СЂРёС†С‹ РґРѕР»Р¶РЅС‹ СЂР°РІРЅСЏС‚СЊСЃСЏ СЃС‚СЂРѕРєР°Рј 2РѕР№ РјР°С‚СЂРёС†С‹ ", "РћС€РёР±РєР°");
 	}
 	else if (m1 == n2)
 	{
@@ -860,7 +860,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 		}
 		catch (ArgumentOutOfRangeException^ e)
 		{
-			MessageBox::Show("Возможно, вы забыли заново создать матрицу после изменения кол-ва строк/столбцов или вовсе не создали ее", "Ошибка");
+			MessageBox::Show("Р’РѕР·РјРѕР¶РЅРѕ, РІС‹ Р·Р°Р±С‹Р»Рё Р·Р°РЅРѕРІРѕ СЃРѕР·РґР°С‚СЊ РјР°С‚СЂРёС†Сѓ РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ РєРѕР»-РІР° СЃС‚СЂРѕРє/СЃС‚РѕР»Р±С†РѕРІ РёР»Рё РІРѕРІСЃРµ РЅРµ СЃРѕР·РґР°Р»Рё РµРµ", "РћС€РёР±РєР°");
 			goto error;
 		}
 		dataGridView3->RowCount = n1;
@@ -896,7 +896,7 @@ private: System::Void button6_Click(System::Object^  sender, System::EventArgs^ 
 	int stepen = Convert::ToInt32(numericUpDown5->Value);
 	if (n != m)
 	{
-		MessageBox::Show("Возводить в степерь можно только квадратные матрицы", "Ошибка");
+		MessageBox::Show("Р’РѕР·РІРѕРґРёС‚СЊ РІ СЃС‚РµРїРµСЂСЊ РјРѕР¶РЅРѕ С‚РѕР»СЊРєРѕ РєРІР°РґСЂР°С‚РЅС‹Рµ РјР°С‚СЂРёС†С‹", "РћС€РёР±РєР°");
 	}
 	else if (n == m)
 	{
@@ -913,7 +913,7 @@ private: System::Void button6_Click(System::Object^  sender, System::EventArgs^ 
 		}
 		catch (ArgumentOutOfRangeException^ e)
 		{
-			MessageBox::Show("Возможно, вы забыли заново создать матрицу после изменения кол-ва строк/столбцов или вовсе не создали ее", "Ошибка");
+			MessageBox::Show("Р’РѕР·РјРѕР¶РЅРѕ, РІС‹ Р·Р°Р±С‹Р»Рё Р·Р°РЅРѕРІРѕ СЃРѕР·РґР°С‚СЊ РјР°С‚СЂРёС†Сѓ РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ РєРѕР»-РІР° СЃС‚СЂРѕРє/СЃС‚РѕР»Р±С†РѕРІ РёР»Рё РІРѕРІСЃРµ РЅРµ СЃРѕР·РґР°Р»Рё РµРµ", "РћС€РёР±РєР°");
 			goto error;
 		}
 		
@@ -968,7 +968,7 @@ private: System::Void button7_Click(System::Object^  sender, System::EventArgs^ 
 	int m = Convert::ToInt32(numericUpDown2->Value);
 	if (n != m)
 	{
-		MessageBox::Show("Определитель можно найти только у квадратной матрицы", "Ошибка");
+		MessageBox::Show("РћРїСЂРµРґРµР»РёС‚РµР»СЊ РјРѕР¶РЅРѕ РЅР°Р№С‚Рё С‚РѕР»СЊРєРѕ Сѓ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹", "РћС€РёР±РєР°");
 	}
 	else if (n == m)
 	{
@@ -984,7 +984,7 @@ private: System::Void button7_Click(System::Object^  sender, System::EventArgs^ 
 		}
 		catch (ArgumentOutOfRangeException^ e)
 		{
-			MessageBox::Show("Возможно, вы забыли заново создать матрицу после изменения кол-ва строк/столбцов или вовсе не создали ее", "Ошибка");
+			MessageBox::Show("Р’РѕР·РјРѕР¶РЅРѕ, РІС‹ Р·Р°Р±С‹Р»Рё Р·Р°РЅРѕРІРѕ СЃРѕР·РґР°С‚СЊ РјР°С‚СЂРёС†Сѓ РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ РєРѕР»-РІР° СЃС‚СЂРѕРє/СЃС‚РѕР»Р±С†РѕРІ РёР»Рё РІРѕРІСЃРµ РЅРµ СЃРѕР·РґР°Р»Рё РµРµ", "РћС€РёР±РєР°");
 			goto error;
 		}
 
@@ -993,12 +993,12 @@ private: System::Void button7_Click(System::Object^  sender, System::EventArgs^ 
 			{
 				Opr = a[0][0];
 
-				MessageBox::Show(Convert::ToString(Opr), "определитель");
+				MessageBox::Show(Convert::ToString(Opr), "РѕРїСЂРµРґРµР»РёС‚РµР»СЊ");
 			}
 			else if (n == 2)
 			{
 				Opr = a[0][0] * a[1][1] - a[0][1] * a[1][0];
-				MessageBox::Show(Convert::ToString(Opr), "определитель");
+				MessageBox::Show(Convert::ToString(Opr), "РѕРїСЂРµРґРµР»РёС‚РµР»СЊ");
 			}
 			else if (n > 2)
 			{
@@ -1043,11 +1043,11 @@ private: System::Void button7_Click(System::Object^  sender, System::EventArgs^ 
 				}
 				if (iOperation % 2 == 0)
 				{
-					MessageBox::Show(Convert::ToString(Opr), "определитель");
+					MessageBox::Show(Convert::ToString(Opr), "РѕРїСЂРµРґРµР»РёС‚РµР»СЊ");
 				}
 				else
 				{
-					MessageBox::Show(Convert::ToString(-1 * Opr), "определитель");
+					MessageBox::Show(Convert::ToString(-1 * Opr), "РѕРїСЂРµРґРµР»РёС‚РµР»СЊ");
 				}
 			}
 		error:
@@ -1060,7 +1060,7 @@ private: System::Void dataGridView1_CellEndEdit(System::Object^  sender, System:
 	int q;
 	if (!Int32::TryParse(Convert::ToString(dataGridView1->CurrentCell->Value), q)) 
 	{
-		MessageBox::Show("Введены недопустимые элементы(допускаются только цифры и без пробелов)", "Ошибка");
+		MessageBox::Show("Р’РІРµРґРµРЅС‹ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЌР»РµРјРµРЅС‚С‹(РґРѕРїСѓСЃРєР°СЋС‚СЃСЏ С‚РѕР»СЊРєРѕ С†РёС„СЂС‹ Рё Р±РµР· РїСЂРѕР±РµР»РѕРІ)", "РћС€РёР±РєР°");
 		dataGridView1->CurrentCell->Value = "0";
 	}
 }
@@ -1069,7 +1069,7 @@ private: System::Void dataGridView2_CellEndEdit(System::Object^  sender, System:
 	Int64 q;
 	if (!Int64::TryParse(Convert::ToString(dataGridView2->CurrentCell->Value), q))
 	{
-		MessageBox::Show("Введены недопустимые элементы(допускаются только цифры и без пробелов)", "Ошибка");
+		MessageBox::Show("Р’РІРµРґРµРЅС‹ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЌР»РµРјРµРЅС‚С‹(РґРѕРїСѓСЃРєР°СЋС‚СЃСЏ С‚РѕР»СЊРєРѕ С†РёС„СЂС‹ Рё Р±РµР· РїСЂРѕР±РµР»РѕРІ)", "РћС€РёР±РєР°");
 		dataGridView2->CurrentCell->Value = "0";
 	}
 }
@@ -1135,7 +1135,7 @@ private: System::Void button15_Click(System::Object^  sender, System::EventArgs^
 }
 private: System::Void button13_Click(System::Object^  sender, System::EventArgs^  e)
 {
-	MessageBox::Show("Фукция выравнивает столбцы, делая матрицы более компактными и удобными. ВНИМАНИЕ: эта фукция очень замедляет программу, не используйте ее при работе с матрицами более чем 100х100");
+	MessageBox::Show("Р¤СѓРєС†РёСЏ РІС‹СЂР°РІРЅРёРІР°РµС‚ СЃС‚РѕР»Р±С†С‹, РґРµР»Р°СЏ РјР°С‚СЂРёС†С‹ Р±РѕР»РµРµ РєРѕРјРїР°РєС‚РЅС‹РјРё Рё СѓРґРѕР±РЅС‹РјРё. Р’РќРРњРђРќРР•: СЌС‚Р° С„СѓРєС†РёСЏ РѕС‡РµРЅСЊ Р·Р°РјРµРґР»СЏРµС‚ РїСЂРѕРіСЂР°РјРјСѓ, РЅРµ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РµРµ РїСЂРё СЂР°Р±РѕС‚Рµ СЃ РјР°С‚СЂРёС†Р°РјРё Р±РѕР»РµРµ С‡РµРј 100С…100");
 }
 
 
