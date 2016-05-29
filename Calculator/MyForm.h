@@ -13,7 +13,7 @@ namespace Calculator {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Сводка для MyForm ппилвоаилаоаоватпва
+	/// Сводка для MyForm 
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -575,7 +575,7 @@ namespace Calculator {
 
 		}
 #pragma endregion
-
+		//функция создания матрицы
 		double **CreateMatrix(const int N, const int M)
 		{
 			double **matrix = new double *[N];
@@ -595,13 +595,13 @@ namespace Calculator {
 			return matrix;
 		}
 
-
+		//Функция для вывода ошибки, в случаи нехватки памяти
 		void MemoryError()
 		{					
 			MessageBox::Show("Нехватка памяти", "Ошибка");
 			exit(1);		
 		}
-
+		//функция удаления матрицы
 		void Del(double **A, int N)
 		{
 
@@ -611,25 +611,26 @@ namespace Calculator {
 			}
 			delete[]A;
 		}
-
+//кнопка создания матрицы А
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) 
 	{
 		int n = Convert::ToInt32(numericUpDown1->Value);
 		int m = Convert::ToInt32(numericUpDown2->Value);
-		if (radioButton2->Checked)
+		if (radioButton2->Checked)      //Если выбранно не выравнивать столбцы
 		{
-
+			//если Гридвью не пуст
 			if (dataGridView1->Rows->Count != 0 && dataGridView1->Columns->Count != 0)
 			{
 				while (dataGridView1->Rows->Count != 0)
 				{
-					dataGridView1->Rows->Remove(dataGridView1->Rows[dataGridView1->Rows->Count - 1]);
+					dataGridView1->Rows->Remove(dataGridView1->Rows[dataGridView1->Rows->Count - 1]);    //удаляем строки пока не 0
 				}
 				while (dataGridView1->Columns->Count != 0)
 				{
-					dataGridView1->Columns->Remove(dataGridView1->Columns[dataGridView1->Columns->Count - 1]);
+					dataGridView1->Columns->Remove(dataGridView1->Columns[dataGridView1->Columns->Count - 1]);   //удаляем стобцы пока не 0
 				}
 			}
+			//создаем таблицу  Н на М
 			dataGridView1->RowCount = n;
 			dataGridView1->ColumnCount = m;
 
@@ -637,12 +638,13 @@ namespace Calculator {
 			{
 				for (int j = 0; j < m; j++)
 				{
-					dataGridView1->Columns[j]->HeaderCell->Value = Convert::ToString(j + 1);
+					dataGridView1->Columns[j]->HeaderCell->Value = Convert::ToString(j + 1);            //нумеруем строки и столбцы
 					dataGridView1->Rows[i]->HeaderCell->Value = Convert::ToString(i + 1);
 
 				}
 			}
 		}
+		//если выбрано выравнивать
 		if (radioButton1->Checked)
 		{
 			if (dataGridView1->Rows->Count != 0 && dataGridView1->Columns->Count != 0)
@@ -668,12 +670,12 @@ namespace Calculator {
 
 				}
 			}
-			dataGridView1->AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders);
+			dataGridView1->AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders);  //выравниваем
 			dataGridView1->AutoResizeColumns();
 		}
 	
 	}
-
+// матрица В все тоже самое
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e)
 {
 	int n = Convert::ToInt32(numericUpDown3->Value);
@@ -735,10 +737,11 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 		}
 	
 }
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
+		 
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)    //кнопка суммы
 {
-	
-	int n = Convert::ToInt32(numericUpDown1->Value);
+	//получаем значения строк и столбцов из нужных ячеек
+	int n = Convert::ToInt32(numericUpDown1->Value);                     
 	int m = Convert::ToInt32(numericUpDown2->Value);
 	int n1 = Convert::ToInt32(numericUpDown3->Value);
 	int m1 = Convert::ToInt32(numericUpDown4->Value);
@@ -755,9 +758,9 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				try
+				try                                 //трай и кетч на случаи попытки нажать на кнопу суммы, не создав при этом матрицы
 				{
-					a[i][j] = Convert::ToInt32(dataGridView1->Rows[i]->Cells[j]->Value);
+					a[i][j] = Convert::ToInt32(dataGridView1->Rows[i]->Cells[j]->Value); //присваиваем нашим матрицы значения, соответсвующие значениям в таблицах гридвью
 					b[i][j] = Convert::ToInt32(dataGridView2->Rows[i]->Cells[j]->Value);
 				}
 				catch (ArgumentOutOfRangeException^ e)
@@ -767,7 +770,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				}
 				
 				
-					dataGridView3->RowCount = n;
+					dataGridView3->RowCount = n;              //создаем 3ю таблицу и заполняем ее значениями суммы соответсвующих элементов матриц А и В
 					dataGridView3->ColumnCount = m;
 					dataGridView3->Columns[j]->HeaderCell->Value = Convert::ToString(j + 1);
 					dataGridView3->Rows[i]->HeaderCell->Value = Convert::ToString(i + 1);
@@ -777,11 +780,12 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			}
 		}
 		error:
-		Del(a, n);
+		Del(a, n);               //удаляем матрицы
 		Del(b, n1);
 	}
 }
-private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) 
+		
+private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e)       //Кнопка вычитания(все также как и в сумме)
 {
 	int n = Convert::ToInt32(numericUpDown1->Value);
 	int m = Convert::ToInt32(numericUpDown2->Value);
@@ -825,7 +829,8 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 		Del(b, n1);
 	}
 }
-private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) 
+		 
+private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e)   //кнопка умножения
 {
 
 	int n1 = Convert::ToInt32(numericUpDown1->Value);
@@ -866,7 +871,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 		dataGridView3->RowCount = n1;
 		dataGridView3->ColumnCount = m2;
 
-		for (int i = 0; i < n1; i++) {
+		for (int i = 0; i < n1; i++) {                   //умножаем матрицы по правилу умножения матриц
 			for (int j = 0; j < m2; j++) {
 				c[i][j] = 0;
 				for (int k = 0; k < n2; k++) {
@@ -888,15 +893,15 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 		Del(c, n1);
 	}
 }
-private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) 
+private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e)  // кнопка возведения в степень
 {
 	
 	int n = Convert::ToInt32(numericUpDown1->Value);
 	int m = Convert::ToInt32(numericUpDown2->Value);
-	int stepen = Convert::ToInt32(numericUpDown5->Value);
+	int stepen = Convert::ToInt32(numericUpDown5->Value);    //получаем значение степени из соответсвующей ячейки
 	if (n != m)
 	{
-		MessageBox::Show("Возводить в степерь можно только квадратные матрицы", "Ошибка");
+		MessageBox::Show("Возводить в степень можно только квадратные матрицы", "Ошибка");
 	}
 	else if (n == m)
 	{
@@ -925,9 +930,9 @@ private: System::Void button6_Click(System::Object^  sender, System::EventArgs^ 
 					b[i][j] = a[i][j];
 			int k = 0;
 
-			while (k < stepen - 1)
-			{
-				for (int i = 0; i < n; i++)
+			while (k < stepen - 1)          //цикл повторяется на заданное колво степени(-1 т.к первое перемножение это уже матрица в квадрате)
+			{                                  //то есть чтобы возвести в 3ю степень цикл должен пройти 2 раза
+				for (int i = 0; i < n; i++)   
 				{
 					for (int j = 0; j < m; j++)
 					{
@@ -961,7 +966,7 @@ private: System::Void button6_Click(System::Object^  sender, System::EventArgs^ 
 	}
    
 }
-private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) 
+private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e)    //кнопка определителя
 {
 	
 	int n = Convert::ToInt32(numericUpDown1->Value);
@@ -989,21 +994,21 @@ private: System::Void button7_Click(System::Object^  sender, System::EventArgs^ 
 		}
 
 			double Opr;
-			if (n == 1)
+			if (n == 1)     //отдельный случай для еденичной матрицы
 			{
 				Opr = a[0][0];
 
 				MessageBox::Show(Convert::ToString(Opr), "определитель");
 			}
-			else if (n == 2)
+			else if (n == 2)  //отдельный случай для матрицы 2х2
 			{
 				Opr = a[0][0] * a[1][1] - a[0][1] * a[1][0];
 				MessageBox::Show(Convert::ToString(Opr), "определитель");
 			}
-			else if (n > 2)
+			else if (n > 2)      //случаи для матриц больше чем 2х2
 			{
 				int iOperation = 0;
-				for (int i = 0; i < n - 1; i++)
+				for (int i = 0; i < n - 1; i++)   //считаем определитель методом гаусса, с помощью элементарных преобразований
 				{
 					if (a[i][i] == 0)
 					{
@@ -1020,17 +1025,17 @@ private: System::Void button7_Click(System::Object^  sender, System::EventArgs^ 
 								k = n;
 							}
 						}
-						iOperation++;
+						iOperation++;     //счетчик на то, сколько раз были свапнуты строки
 					}
 
 					if (a[i][i] != 0)
 					{
 						for (int k = i + 1; k < n; k++)
 						{
-							double nod = -1 * a[k][i] / a[i][i];
+							double nod = -1 * a[k][i] / a[i][i];    
 							for (int j = i; j < n; j++)
 							{
-								a[k][j] = a[k][j] + (nod * a[i][j]);
+								a[k][j] = a[k][j] + (nod * a[i][j]);    
 							}
 						}
 					}
@@ -1039,9 +1044,9 @@ private: System::Void button7_Click(System::Object^  sender, System::EventArgs^ 
 
 				for (int i = 0; i < n; i++)
 				{
-					Opr *= a[i][i];
+					Opr *= a[i][i];     
 				}
-				if (iOperation % 2 == 0)
+				if (iOperation % 2 == 0)   //если строки были свапнут нечетное колво раз, то определитель меняет знак
 				{
 					MessageBox::Show(Convert::ToString(Opr), "определитель");
 				}
@@ -1055,6 +1060,7 @@ private: System::Void button7_Click(System::Object^  sender, System::EventArgs^ 
 	}
 
 }
+		 //защита от ввода символов и букв для 1ого гридвью
 private: System::Void dataGridView1_CellEndEdit(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) 
 {
 	int q;
@@ -1064,6 +1070,7 @@ private: System::Void dataGridView1_CellEndEdit(System::Object^  sender, System:
 		dataGridView1->CurrentCell->Value = "0";
 	}
 }
+		 //защита от ввода символов и букв для 2ого гридвью
 private: System::Void dataGridView2_CellEndEdit(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e)
 {
 	Int64 q;
@@ -1073,6 +1080,7 @@ private: System::Void dataGridView2_CellEndEdit(System::Object^  sender, System:
 		dataGridView2->CurrentCell->Value = "0";
 	}
 }
+		 //Кнопки рандома для матриц А и В
 private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) 
 {
 	for (int i = 0; i < dataGridView1->Rows->Count; i++)
@@ -1088,6 +1096,7 @@ private: System::Void button8_Click(System::Object^  sender, System::EventArgs^ 
 				 
 			 
 		 }
+				  //Кнопки очистки для матриц(все значения приводим к нулю)
 private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) 
 {
 	
@@ -1111,6 +1120,7 @@ private: System::Void button12_Click(System::Object^  sender, System::EventArgs^
 			dataGridView3->Rows[i]->Cells[j]->Value = "0";
 	
 }
+		 //кнопки удаления для матриц(полностью удаляет таблицу гридвью)
 private: System::Void button14_Click(System::Object^  sender, System::EventArgs^  e) 
 {
 	while (dataGridView1->Rows->Count != 0)
