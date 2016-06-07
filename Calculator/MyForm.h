@@ -576,6 +576,7 @@ namespace Calculator {
 		}
 #pragma endregion
 		//функция создания матрицы
+		//Везде N - строки, M - столбцы
 		double **CreateMatrix(const int N, const int M)
 		{
 			double **matrix = new double *[N];
@@ -787,8 +788,8 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 		
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e)       //Кнопка вычитания(все также как и в сумме)
 {
-	int n = Convert::ToInt32(numericUpDown1->Value);
-	int m = Convert::ToInt32(numericUpDown2->Value);
+	int n = Convert::ToInt32(numericUpDown1->Value);  
+	int m = Convert::ToInt32(numericUpDown2->Value);  
 	int n1 = Convert::ToInt32(numericUpDown3->Value);
 	int m1 = Convert::ToInt32(numericUpDown4->Value);
 	if (n != n1 || m != m1)
